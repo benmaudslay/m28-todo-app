@@ -1,4 +1,5 @@
 import "./Item.css";
+import Date from "./Date"
 
 const Item = ({ value, checked, handleChecked, handleDelete, date }) => {
   return (
@@ -16,7 +17,7 @@ const Item = ({ value, checked, handleChecked, handleDelete, date }) => {
           <button onClick={handleDelete}>🗑</button>
         </div>
       </div>
-      <p className="date">{date.getDate()}/{date.getMonth()}: {date.getHours()}</p>
+      <Date todoDate={date} />
     </li>
   );
 };

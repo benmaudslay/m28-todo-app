@@ -16,6 +16,8 @@ import List from "./components/List";
  * List item component for each todo
  */
 
+// CRUD - create, read, update & delete
+
 const App = () => {
   const [todos, setTodos] = useState([]);
 
