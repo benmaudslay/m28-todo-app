@@ -4,7 +4,7 @@ const List = (props) => {
     return (
       <ul>
         {props.todos.map((element, index) => {
-          return <Item value={element} key={index} />
+          return <Item value={element.value} key={index} />
         })}
       </ul>
     )

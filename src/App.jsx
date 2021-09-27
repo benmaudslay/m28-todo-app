@@ -20,7 +20,11 @@ const App = () => {
   const [todos, setTodos] = useState([]);
 
   const handleForm = (newTodo) => {
-    setTodos([...todos, newTodo]);
+    setTodos([...todos, {
+      value: newTodo,
+      checked: false,
+      date: new Date()
+    }]);
   };
 
   return (
