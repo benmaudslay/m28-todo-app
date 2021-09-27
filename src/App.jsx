@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Form from "./components/Form";
+import List from "./components/List";
 
 /** AIMS
  * Add todo items to a todo list
@@ -26,11 +27,7 @@ const App = () => {
     <div>
       <h1>Todo List</h1>
       <Form handleForm={handleForm} />
-      <ul>
-        {todos.map((item, index) => {
-          return <li key={index}>{item}</li>;
-        })}
-      </ul>
+      <List todos={todos} />
     </div>
   );
 };
