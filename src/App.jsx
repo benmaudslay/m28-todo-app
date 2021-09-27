@@ -27,11 +27,17 @@ const App = () => {
     }]);
   };
 
+  const handleChecked = (index) => {
+    let tempArr = [...todos]
+    tempArr[index].checked = !tempArr[index].checked
+    setTodos(tempArr)
+  }
+
   return (
     <div>
       <h1>Todo List</h1>
       <Form handleForm={handleForm} />
-      <List todos={todos} />
+      <List todos={todos} handleChecked={handleChecked} />
     </div>
   );
 };
