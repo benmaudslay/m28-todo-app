@@ -8,3 +8,8 @@
   width: 250px;
   justify-content: space-between;
 }
+
+.date {
+  margin: 0;
+  font-size: 0.8em;
+}

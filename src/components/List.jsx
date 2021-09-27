@@ -9,6 +9,8 @@ const List = (props) => {
             value={element.value} 
             checked={element.checked} 
             key={index} 
+            date={element.date}
+            handleDelete={() => props.handleDelete(index)}
             handleChecked={() => props.handleChecked(index)} 
           />
         );

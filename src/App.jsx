@@ -20,24 +20,37 @@ const App = () => {
   const [todos, setTodos] = useState([]);
 
   const handleForm = (newTodo) => {
-    setTodos([...todos, {
-      value: newTodo,
-      checked: false,
-      date: new Date()
-    }]);
+    setTodos([
+      ...todos,
+      {
+        value: newTodo,
+        checked: false,
+        date: new Date(),
+      },
+    ]);
   };
 
   const handleChecked = (index) => {
-    let tempArr = [...todos]
-    tempArr[index].checked = !tempArr[index].checked
-    setTodos(tempArr)
-  }
+    let tempArr = [...todos];
+    tempArr[index].checked = !tempArr[index].checked;
+    setTodos(tempArr);
+  };
+
+  const handleDelete = (index) => {
+    let tempArr = [...todos];
+    tempArr.splice(index, 1)
+    setTodos(tempArr);
+  };
 
   return (
     <div>
       <h1>Todo List</h1>
       <Form handleForm={handleForm} />
-      <List todos={todos} handleChecked={handleChecked} />
+      <List
+        todos={todos}
+        handleChecked={handleChecked}
+        handleDelete={handleDelete}
+      />
     </div>
   );
 };
