@@ -1,5 +1,5 @@
 import "./Item.css";
-import Date from "../Date"
+import Date from "./Date"
 
 const Item = ({ value, checked, handleChecked, handleDelete, date }) => {
   return (
